@@ -3,7 +3,7 @@
 This document will help you to install and use [**tau-Argus**](https://github.com/sdcTools/tauargus) that has the Cell Key Method as one of the available tabular data protection methods.
 
 ### Prerequisites
-In order to be able to apply the Cell Key Method from tau-argus, you first need to add a variable to you microdata file, containing so called record keys (Uniform(0,1) realisations). This should be done **one time** per microdata file to ensure consistency between tables resulting from different runs of tau-argus on the same microdata file.
+In order to be able to apply the Cell Key Method from tau-argus, you first need to add a variable to you microdata file containing so called record keys (Uniform(0,1) realisations). This should be done **one time** per microdata file to ensure consistency between tables resulting from different runs of tau-argus on the same microdata file.
 
 Additionally you need a so-called p-table that defines the distribution of the noise to be added. To that end you can make use of the [**ptable**](https://github.com/sdcTools/ptable) package. For tau-argus you need to save the p-table in `destatis`-format (see documentation of the [**ptable**](https://github.com/sdcTools/ptable) package).
 
