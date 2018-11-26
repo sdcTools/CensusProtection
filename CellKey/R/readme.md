@@ -13,6 +13,13 @@ if (!require("devtools")) install.packages("devtools")
 library(devtools)
 ```
 
+#### bring your R-packages up to date
+The following commands updates all your R-packages which is a good idea to do if one works with (development) packages.  
+  
+```
+install.packages(ask=FALSE)
+```
+
 #### ptable
 The [**ptable**](https://github.com/sdcTools/ptable) package is a requirement for the [**cellKey**](https://github.com/sdcTools/cellKey) package. It can be installed directly from github using function `install_github()`:
 
