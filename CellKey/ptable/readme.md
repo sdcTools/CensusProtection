@@ -1,9 +1,16 @@
-## Installation of the ptable package prototype
+## Installation of the ptable package prototype*
 
 This document will help you to install and apply the [**ptable**](https://github.com/sdcTools/ptable) package which allows to generate peturbation tables that are necessary for the [**cellkey**](https://github.com/sdcTools/cellkey) package and for  [**tauargus**](https://github.com/sdcTools/tauargus).
 
 ### Installation of required packages
 The [**ptable**](https://github.com/sdcTools/ptable) package is not yet on CRAN and therefore must be installed using the  [**devtools**](https://cran.r-project.org/package=devtools) package.
+
+#### bring your R-packages up to date
+The following commands updates all your R-packages which is a good idea to do if one works with (development) packages.  
+  
+```
+install.packages(ask=FALSE)
+```
 
 #### devtools
 This package allows to install packages directly from github and can be installed directly from CRAN. To do so, the following command in **R** installs the package along with all its dependencies and finally loads it:
@@ -27,7 +34,7 @@ install_local("/path/to/downloaded/ptable-0.1.13_prototype.tar.gz",
 The second method allows to install the package directly from github without the need to explicitly download a file. This can be done as follows:
 
 ```
-install_github("sdcTools/cellKey", ref="v0.1.13_prototype", build_vignette=FALSE, dependencies=TRUE)
+install_github("sdcTools/ptable", ref="v0.1.13_prototype", build_vignette=FALSE, dependencies=TRUE)
 ```
 
 If you experience a timeout due to a proxy server while downloading, one can work around this issue by specifying the proxy-server using the httr package:
@@ -73,3 +80,6 @@ The package is developed in its seperate github-repository at [**sdcTools/ptable
 
 ### Feedback
 Feedback (via issues) in the [**issue-tracker**](https://github.com/sdcTools/ptable/issues) with regards to bugs or features requests are welcome as well as pull-requests. Once the package is deemed stable, a version will be released on CRAN too.
+
+
+*Thx to [@bernhard-da]( https://github.com/bernhard-da ) for his installation instructions I used here as template.
