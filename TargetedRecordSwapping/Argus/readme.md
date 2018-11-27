@@ -15,7 +15,7 @@ In the directory where you unzipped the compressed file, you will find
 
 Just start that program and you can start using mu-argus.
 
-Further information you can find in the [**Quick Reference**](https://github.com/sdcTools/muargus/releases/download/5.1.4BETA/QuickReferenceTRS5.1.4.pdf).
+Further information specifically on the use of the Taregeted Record Swapping method can be found in the [**Quick Reference**](https://github.com/sdcTools/muargus/releases/download/5.1.4BETA/QuickReferenceTRS5.1.4.pdf).
 
 ### Feedback
 Feedback (via issues) in the [**issue-tracker**](https://github.com/sdcTools/UserSupport/issues) with regards to bugs or feature requests are welcome.
