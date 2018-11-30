@@ -17,8 +17,7 @@ Here are the steps:
     + if `SAS`: use the provided SAS macro available in the subdirectory `SAS`
 
 2. **Design the random noise** according to your preferences (i.e. set the parameters such as maximum noise and variance of the perturbation) using the `ptable`-package to **generate the perturbation table**. 
-
-**NOTE:** Please use the destatis-format when you design the random noise and export the perturbation table: i.e., `pt_create_pTable(...,type="destatis")`
+    + **NOTE:** Please use the destatis-format when you design the random noise and export the perturbation table: i.e., `pt_create_pTable(...,type="destatis")`
 
 3. Import the mirodata with the attached record keys and create the tables you want to perturb by **adding random noise to the table** using either `Tau-Argus`, the `cellKey`-package or `SAS`
     + Define the tables (see the documentation of the respective tool) 
