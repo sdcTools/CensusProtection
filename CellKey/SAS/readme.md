@@ -23,7 +23,7 @@ We provide the following SAS macros:
     + `csvfile`: The path of the perturbation file (e.g. `csvfile=C:/folder/ptable01.csv`)
     + `output`: The output file (e.g. `output=work.myptable`)
     
-- `%ckm_perturbation`: The macro applies the cell-key method based random noise approach. Users have to specify the following arguments:
+- `%ckm_perturbation()`: The macro applies the cell-key method based random noise approach. Users have to specify the following arguments:
     + `input`: The input table/hypercube with cell keys (e.g. `input=work.macrodatawithcellkey`)
     + `table_var`: The variables that define the table of the input file (e.g. `table_var=gender age geo`)
     + `orig`: The label/name of the original freuency count variable (e.g. `orig=myfreq`)
@@ -38,12 +38,7 @@ We provide the following SAS macros:
 To run the examples we provide, you will need the follwoing files:
 
 - `hc_9_2_synth_microdata.sas7bdat`: A synthetic microdata set without recordkeys to create the Hypercube 9.2
-- `ptable_d2_v108_js1.csv`: A perturbation file that was generated with the ptable-Package as follows: 
-```
-param <- pt_create_pParams(D=2, V=1.08, js=1)
-result <- pt_create_pTable(params=params, type="destatis")
-pt_export(result, file="C:/ptable_d2_v108_js1.csv", tool="SAS")
-```
+
 
 
 ### Example 1: How to generate and attach a record key variable to microdata
@@ -55,4 +50,13 @@ An example is given in the SAS-program `example_generate_recordkeys.sas`.
 
 An example is given in the SAS-program `example_hc_9_2.sas`. 
 
-You will also need the file `example_hc_9_2_multilabel`: It provides the formats that are necessary to generate the hypercube 9.2 with all hierarchies and subtotals. The formats are used by the macro `%ckm_summary` for the given synthetic microdata (you will have to write your own formats for the data you want to aggreagte).
+You will also need:
+
+- `example_hc_9_2_multilabel`: The SAS program provides the formats that are necessary to generate the hypercube 9.2 with all hierarchies and subtotals. The formats are used by the macro `%ckm_summary` for the given synthetic microdata (you will have to write your own formats for the data you want to aggreagte).
+
+- `ptable_d2_v108_js1.csv`: A perturbation file that was generated with the ptable-Package as follows: 
+```
+param <- pt_create_pParams(D=2, V=1.08, js=1)
+result <- pt_create_pTable(params=params, type="destatis")
+pt_export(result, file="C:/ptable_d2_v108_js1.csv", tool="SAS")
+```
