@@ -126,6 +126,7 @@ Macro for perturbation for ptables from R-package "ptable" using the argument ty
 	run;
 
 	%if %isBlank(&rfreq.) = 1 %then %let rfreq = rfreq;
+	%if %isBlank(&cfreq.) = 1 %then %let cfreq = cfreq;
 
 
 	/* sum of weight only if weight variable is available */
