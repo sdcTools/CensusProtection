@@ -24,17 +24,17 @@ library(devtools)
 To install the [**ptable**](https://github.com/sdcTools/ptable) for the prototype testing, there are two possibilities.
 
 
-One is to download the compressed file [**v0.1.13_prototype.tar.gz**](https://github.com/sdcTools/ptable/archive/v0.1.13_prototype.tar.gz) and issue the following command:
+One is to download the compressed file [**v0.2.0_prototype.tar.gz**](https://github.com/sdcTools/ptable/archive/v0.2.0_prototype.tar.gz) and issue the following command:
 
 ```
-install_local("/path/to/downloaded/ptable-0.1.13_prototype.tar.gz",
-  build_vignette=FALSE, dependencies=TRUE)
+install_local("/path/to/downloaded/ptable-0.2.0_prototype.tar.gz",
+  build_vignette=TRUE, dependencies=TRUE)
 ```
 
 The second method allows to install the package directly from github without the need to explicitly download a file. This can be done as follows:
 
 ```
-install_github("sdcTools/ptable", ref="v0.1.13_prototype", build_vignette=FALSE, dependencies=TRUE)
+install_github("sdcTools/ptable", ref="v0.2.0_prototype", build_vignette=FALSE, dependencies=TRUE)
 ```
 
 If you experience a timeout due to a proxy server while downloading, one can work around this issue by specifying the proxy-server using the httr package:
@@ -51,9 +51,11 @@ Once the package has been installed, it can be loaded and its functionality can 
 ```
 library(ptable)
 
+# Vignette (by Enderle and Giessing)
+pt_vignette()
+
 params <- pt_create_pParams(D=3, V=0.7)
 ptable_destatis <- pt_create_pTable(params = params, type="destatis")
-ptable_abs <- pt_create_pTable(params = params, type="abs")
 
 ptable() # GUI
 ```
@@ -66,8 +68,6 @@ help(pa=ptable)
 However, the documentation is not finished and there is still a to-do list
 -   Merge the two main functions `pt_create_pParams(...)` and `pt_create_pTable(...)` into one function
 -   Allow for special cases: extended parameter setting, i.e. improved row-wise parameter settings
--   Add theoretical short description
--   Add vignettes (documentation)
 -   Add error codes
 -   Improved `fifi_...`-functions
 -   Add test environment
