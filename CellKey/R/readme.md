@@ -24,7 +24,7 @@ install.packages(ask=FALSE)
 The [**ptable**](https://github.com/sdcTools/ptable) package is a requirement for the [**cellKey**](https://github.com/sdcTools/cellKey) package. It can be installed directly from github using function `install_github()`:
 
 ```
-install_github("sdcTools/ptable", ref="v0.1.13_prototype", build_vignette=TRUE, dependencies=TRUE)
+install_github("sdcTools/ptable", ref="v0.2.0_prototype", build_vignette=TRUE, dependencies=TRUE)
 ```
 
 If you experience a timeout due to a proxy server while downloading, one can work around this issue by specifying the proxy-server using the httr package:
