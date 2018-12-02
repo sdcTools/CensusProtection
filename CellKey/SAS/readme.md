@@ -59,5 +59,5 @@ You will also need:
 ```
 param <- pt_create_pParams(D=2, V=1.08, js=1)
 result <- pt_create_pTable(params=params, type="destatis")
-pt_export(result, file="C:/ptable_d2_v108_js1.csv", tool="SAS")
+pt_export(result, file="C:/ptable_d2_v108_js1.csv", SDCtool="SAS")
 ```
