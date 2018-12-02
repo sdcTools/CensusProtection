@@ -34,7 +34,7 @@ install_local("/path/to/downloaded/ptable-0.2.0_prototype.tar.gz",
 The second method allows to install the package directly from github without the need to explicitly download a file. This can be done as follows:
 
 ```
-install_github("sdcTools/ptable", ref="v0.2.0_prototype", build_vignette=FALSE, dependencies=TRUE)
+install_github("sdcTools/ptable", ref="v0.2.0_prototype", build_vignette=TRUE, dependencies=TRUE)
 ```
 
 If you experience a timeout due to a proxy server while downloading, one can work around this issue by specifying the proxy-server using the httr package:
