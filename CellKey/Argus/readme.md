@@ -17,7 +17,7 @@ In the directory where you unzipped the compressed file, you will find
 
 Just start that program and you can start using tau-argus.
 
-Further information you can find in the [**Quick Reference**](https://github.com/sdcTools/tauargus/releases/download/4.1.12_BETA_build2/QuickReferenceCKM4.1.12.2.pdf).
+Further information specifically on the use of the Cell Key Method can be found in the [**Quick Reference**](https://github.com/sdcTools/tauargus/releases/download/4.1.12_BETA_build2/QuickReferenceCKM4.1.12.3.pdf).
 
 ### Feedback
 Feedback (via issues) in the [**issue-tracker**](https://github.com/sdcTools/UserSupport/issues) with regards to bugs or feature requests are welcome.
