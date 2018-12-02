@@ -51,13 +51,11 @@ Once the package has been installed, it can be loaded and its functionality can 
 ```
 library(ptable)
 
-# Vignette (by Enderle and Giessing)
+# Documentation/Vignette (by Enderle and Giessing)
 pt_vignette()
 
-params <- pt_create_pParams(D=3, V=0.7)
-ptable_destatis <- pt_create_pTable(params = params, type="destatis")
-
-ptable() # GUI
+# Graphical User Interface (GUI) for first time users
+ptable()
 ```
 
 Furthermore, all functions are documented and the help-index of the package can be started using
