@@ -5,7 +5,7 @@ This document will help you to install and use [**mu-Argus**](https://github.com
 ### Prerequisites
 In order to be able to apply the Targeted Record Swapping method, the regional hierarchy should be available as separate variables. So e.g., one variable containing County, another containing Town, another containing Neighbourhood, ...
 
-### Installing u-Argus
+### Installing mu-Argus
 To install the prototype for testing in a Windows based environment, download the compressed file [**mu_argus 5.1.4BETA**](https://github.com/sdcTools/muargus/releases/download/5.1.4BETA/MuArgus5.1.4BETA.zip). Unzip this file into a directory where you have write permission. 
 
 ### Using the package
