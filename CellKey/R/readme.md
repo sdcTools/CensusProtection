@@ -24,7 +24,7 @@ update.packages(ask=FALSE)
 The [**ptable**](https://github.com/sdcTools/ptable) package is a requirement for the [**cellKey**](https://github.com/sdcTools/cellKey) package. It can be installed directly from github using function `install_github()`:
 
 ```
-install_github("sdcTools/ptable", ref="v0.2.0_prototype", build_vignette=TRUE, dependencies=TRUE)
+install_github("sdcTools/ptable", ref="v0.2.0_prototype", dependencies=c("Imports","Depends"), build_opts="--build-vignettes", force=TRUE)
 ```
 
 If you experience a timeout due to a proxy server while downloading, one can work around this issue by specifying the proxy-server using the httr package:
@@ -40,14 +40,13 @@ To install the [**cellKey**](https://github.com/sdcTools/cellKey) for the protot
 One is to download the compressed file [**v0.15.0.tar.gz**](https://github.com/sdcTools/cellKey/archive/v0.15.0.tar.gz) and issue the following command:
 
 ```
-install_local("/path/to/downloaded/cellKey_0.15.0.tar.gz",
-  build_vignette=TRUE, dependencies=TRUE)
+install_local("/path/to/downloaded/cellKey_0.15.0.tar.gz", dependencies=TRUE, build_opts="--build-vignettes", force=TRUE)
 ```
 
 The second method allows to install the package directly from github without the need to explicitly download a file. This can be done as follows:
 
 ```
-install_github("sdcTools/cellKey", ref="v0.15.0", build_vignette=TRUE, dependencies=TRUE)
+install_github("sdcTools/cellKey", ref="v0.15.0", dependencies=TRUE, build_opts="--build-vignettes", force=TRUE)
 ```
 
 ### Using the package
