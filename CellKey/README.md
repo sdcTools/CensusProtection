@@ -13,8 +13,8 @@ Subdirectory `SAS` contains SAS macros
 Here are the steps:
 
 1. Edit the microdata using your preferred tool (e.g. SAS or R) and **attach a record key** to each unit/record/observation (e.g. person, household, company, ...) **one time** for the purpose of consistency:
-    + if `R`: see the documentation of the R-package `cellKey`
     + if `SAS`: use the provided SAS macro available in the subdirectory `SAS`
+    + if `R`: e.g. `format(runif(NUMBEROFOBSERVATIONS), scientific=FALSE, nsmall=15)`, for a more detailed R-code see the Tau-Argus [**Quick Reference**](https://github.com/sdcTools/tauargus/releases/download/4.1.12_BETA_build2/QuickReferenceCKM4.1.12.3.pdf) on page 2
 
 2. **Design the random noise** according to your preferences (i.e. set the parameters such as maximum noise and variance of the perturbation) using the `ptable`-package to **generate the perturbation table**. 
     + **NOTE:** Please use the destatis-format when you design the random noise and export the perturbation table: i.e., `pt_create_pTable(...,type="destatis")`
