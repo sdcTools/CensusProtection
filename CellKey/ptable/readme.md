@@ -9,7 +9,7 @@ The [**ptable**](https://github.com/sdcTools/ptable) package is not yet on CRAN 
 The following commands updates all your R-packages which is a good idea to do if one works with (development) packages.  
   
 ```
-install.packages(ask=FALSE)
+update.packages(ask=FALSE)
 ```
 
 #### devtools
@@ -28,7 +28,7 @@ One is to download the compressed file [**v0.2.0_prototype.tar.gz**](https://git
 
 ```
 install_local("/path/to/downloaded/ptable-0.2.0_prototype.tar.gz",
-  dependencies=c("Imports","Depends", build_opts="--build-vignettes")
+  dependencies=c("Imports","Depends"), build_opts="--build-vignettes")
 ```
 
 The second method allows to install the package directly from github without the need to explicitly download a file. This can be done as follows:
