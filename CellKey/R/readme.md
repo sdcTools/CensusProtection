@@ -14,10 +14,10 @@ library(devtools)
 ```
 
 #### bring your R-packages up to date
-The following commands updates all your R-packages which is a good idea to do if one works with (development) packages.  
+The following commands updates all your R-packages which is a good idea every now and then.
   
 ```
-install.packages(ask=FALSE)
+update.packages(ask=FALSE)
 ```
 
 #### ptable
