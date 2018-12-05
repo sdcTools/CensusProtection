@@ -16,7 +16,7 @@ To apply record swapping to original microdata it is possible to use either the 
 
 Both implementation use the same underlying new C++ code which is optimized to be incredibly fast. This new implementation of the targeted record swapping method is intended to be very close to the SAS codes tested in the previous SGA based on the ONS codes. More information regarding the small differences can be found in the vignette of the recordSwapping package.
 
-All software for the prototype testing of the Targeted Record Swapping can be found [**here**](https://github.com/sdcTools/protoTestCensus/TargetedRecordSwapping).
+All software for the prototype testing of the Targeted Record Swapping can be found [**here**](https://github.com/sdcTools/protoTestCensus/tree/master/TargetedRecordSwapping).
 
 #### 1.1	package recordSwapping 
 
@@ -41,27 +41,31 @@ A small dataset is available in the test version of muArgus. It enables users to
 
 The cell-key method can be applied either with the R package cellKey (paragraph 2.2) or tauArgus (paragraph 2.3). Both implementation use the ptable package (paragraph 2.1) but on the one hand it is included in the cellKey package (ptable still need to be installed but it is not necessary to use its functions because cellKey calls it directly), while on the other hand you need to use the ptable package to first compute a perturbation table, to export it, and use it in tauArgus.
 
-All software for the prototype testing of the cell-key method can be found [**here**](https://github.com/sdcTools/protoTestCensus/CellKey).
+All software for the prototype testing of the cell-key method can be found [**here**](https://github.com/sdcTools/protoTestCensus/tree/master/CellKey).
 
 #### 2.1 package ptable
 
 The ptable package needs to be installed from github using the devtools package with the following line of codes:
 ```
 rm(list=ls())
+update.packages(ask=FALSE)
 install.packages("devtools")
+library(devtools)
 install_github("sdcTools/ptable", ref="v0.2.0_prototype", build_opts="--build-vignettes", dependencies=c("Imports","Depends"))
 ```
 
-The package includes a vignette and a graphical user interface and it can draw plots that describe the pertubations that will be applied to the hypercubes based on a specific pTable with the cellKey package or tauArgus.
+The package includes a vignette and a graphical user interface and it can draw plots that describe the pertubations that will be applied to the hypercubes based on a specific pTable with the cellKey package, tauArgus or SAS.
 
 #### 2.2	package cellKey
 
 The cellKey package also needs to be installed from github using the devtools package with the following line of codes. It is necessary to have the package ptable installed before installing the cellKey package.
 ```
 rm(list=ls())
+update.packages(ask=FALSE)
 install.packages("devtools")
-install_github("sdcTools/ptable", ref="v0.2.0_prototype", build_opts="--build-vignettes", dependencies=c("Imports","Depends"))
+library(devtools)
 install_github("sdcTools/ptable", ref="v0.2.0_prototype", dependencies=c("Imports","Depends"), build_opts="--build-vignettes", force=TRUE)
+install_github("sdcTools/cellKey", ref="v0.15.0", dependencies=TRUE, build_opts="--build-vignettes", force=TRUE)
 ```
 
 The package includes a vignette with an example on how to describe and create hierarchies and use the different functions of the package. Users have to be aware that to keep the consistency between different hypercubes (i.e. that if the same cell appears in different hypercubes, it is perturbed in the same way), the same pTable need to be used. Including the ptable package in cellKey package makes it more straightforward to use, but this mistake of using different pTables for different hypercubes need to be avoided to keep the consistency of the method. However, if prefered, users can use the ptable package directly and use its output as input to the cellKey package.
