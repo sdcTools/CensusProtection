@@ -2,6 +2,7 @@
 Prototype Testing For Census (Target Record Swapping and Cell Key Method)
 
 ## How to use the open-source versions of the recommended census protection methods 
+(This text is also available in [**`pdf`-format**](https://github.com/sdcTools/protoTestCensus/blob/master/How_to.pdf).)
 
 In the previous Specific Grant Agreement called « Harmonised protection of CENSUS data in the ESS » methods have been developed and tested. In deliverables 3.3 and 3.4 recommendations were given on how to protect the hypercubes and the grid data in the next Census. The two methods (record swapping and the cell key method) can be applied independently from each other. 
 
