@@ -13,8 +13,8 @@ output:
 
 ```{r, eval = FALSE, echo = FALSE}
 # R commands to produce both files, md and pdf
-rmarkdown::render("C:/Lokaler Datenbereich/github/Readme/Readme.Rmd", output_format = "md_document", output_file = "README.md")
-rmarkdown::render("C:/Lokaler Datenbereich/github/Readme/Readme.Rmd", output_format = "pdf_document", output_file = "How_to.pdf")
+rmarkdown::render("Readme.Rmd", output_format = "md_document", output_file = "README.md")
+rmarkdown::render("Readme.Rmd", output_format = "pdf_document", output_file = "How_to.pdf")
 ```
   
 ```{r, echo = FALSE}
