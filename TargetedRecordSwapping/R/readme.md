@@ -4,9 +4,11 @@
 
 ```
 install.packages("devtools")
-library(devtools)
-devtools::install_github("sdcTools/recordSwapping",ref="recordSwapping_prototype",
-                         build_vignette=TRUE,dependencies=TRUE) 
+remotes::install_github(
+  repo = "sdcTools/recordSwapping",
+  ref="recordSwapping_prototype",
+  build_opts = c("--no-resave-data", "--no-manual")
+)
 ```
 
 ### Dowloading .tar.gz and install locally
