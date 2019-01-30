@@ -17,22 +17,29 @@ library(devtools)
 The following commands updates all your R-packages which is a good idea every now and then.
   
 ```
-update.packages(ask=FALSE)
+update.packages(ask = FALSE)
 ```
 
 #### ptable
 The [**ptable**](https://github.com/sdcTools/ptable) package is a requirement for the [**cellKey**](https://github.com/sdcTools/cellKey) package. It can be installed directly from github using function `install_github()`:
 
 ```
-install_github("sdcTools/ptable", ref="v0.2.0_prototype", dependencies=c("Imports","Depends"),
-  build_opts="--build-vignettes", force=TRUE)
+install_github(
+  repo = "sdcTools/ptable", 
+  ref = "v0.2.0_prototype", 
+  dependencies = c("Imports", "Depends"),
+  build_opts = "--build-vignettes", 
+  force = TRUE
+)
 ```
 
 If you experience a timeout due to a proxy server while downloading, one can work around this issue by specifying the proxy-server using the httr package:
 
 ```
 if (!require("httr")) install.packages("httr")
-httr::set_config(use_proxy(url="xxx.xxx.xxx.xxx", port=yy))
+httr::set_config(
+  use_proxy(url = "xxx.xxx.xxx.xxx", port = yy)
+)
 ```
 
 #### cellKey
@@ -41,15 +48,24 @@ To install the [**cellKey**](https://github.com/sdcTools/cellKey) for the protot
 One is to download the compressed file [**v0.15.0.tar.gz**](https://github.com/sdcTools/cellKey/archive/v0.15.0.tar.gz) and issue the following command:
 
 ```
-install_local("/path/to/downloaded/cellKey_0.15.0.tar.gz", 
-  dependencies=TRUE, build_opts="--build-vignettes", force=TRUE)
+install_local(
+  path = "/path/to/downloaded/cellKey_0.15.0.tar.gz", 
+  dependencies = TRUE, 
+  build_opts = "--build-vignettes", 
+  force = TRUE
+)
 ```
 
 The second method allows to install the package directly from github without the need to explicitly download a file. This can be done as follows:
 
 ```
-install_github("sdcTools/cellKey", ref="v0.15.0", 
-  dependencies=TRUE, build_opts="--build-vignettes", force=TRUE)
+install_github(
+  repo = "sdcTools/cellKey", 
+  ref = "v0.15.0", 
+  dependencies = TRUE, 
+  build_opts = "--build-vignettes", 
+  force = TRUE
+)
 ```
 
 ### Using the package
@@ -63,7 +79,7 @@ ck_vignette()
 Furthermore, all functions are documented and the help-index of the package can be started using
 
 ```
-help(pa=cellKey)
+help(pa = cellKey)
 ```
 
 ### Further Information
