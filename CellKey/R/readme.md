@@ -48,7 +48,7 @@ To install the [**cellKey**](https://github.com/sdcTools/cellKey) for the protot
 One is to download the compressed file [**v0.15.0.tar.gz**](https://github.com/sdcTools/cellKey/archive/v0.15.0.tar.gz) and issue the following command:
 
 ```
-install_local(
+remotes::install_local(
   path = "/path/to/downloaded/cellKey_0.15.0.tar.gz", 
   dependencies = TRUE, 
   build_opts = "--build-vignettes", 
@@ -59,7 +59,7 @@ install_local(
 The second method allows to install the package directly from github without the need to explicitly download a file. This can be done as follows:
 
 ```
-install_github(
+remotes::install_github(
   repo = "sdcTools/cellKey", 
   ref = "v0.15.0", 
   dependencies = TRUE, 
