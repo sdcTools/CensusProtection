@@ -1,6 +1,6 @@
 ## Installation of mu-Argus 5.1.4BETA
 
-This document will help you to install and use [**mu-Argus**](https://github.com/sdcTools/muargus) that has the Targeted Record Swapping method as one of its microdata protection methods.
+This document will help you to install and use mu-Argus that has the Targeted Record Swapping method as one of its microdata protection methods.
 
 ### Prerequisites
 In order to be able to apply the Targeted Record Swapping method, the regional hierarchy should be available as separate variables. So e.g., one variable containing County, another containing Town, another containing Neighbourhood, ...
