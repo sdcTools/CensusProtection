@@ -1,4 +1,4 @@
-## Installation of the cell-Key package prototype
+## Installation of the cellKey package prototype
 
 This document will help you to install and apply the [**cellKey**](https://github.com/sdcTools/cellKey) package which allows to create perturbed statistical tables.
 
@@ -15,20 +15,39 @@ library(devtools)
 
 #### bring your R-packages up to date
 The following commands updates all your R-packages which is a good idea every now and then.
-  
+
 ```
 update.packages(ask = FALSE)
 ```
 
-#### ptable
-The [**ptable**](https://github.com/sdcTools/ptable) package is a requirement for the [**cellKey**](https://github.com/sdcTools/cellKey) package. It can be installed directly from github using function `install_github()`:
+#### cellKey
+To install the [**cellKey**](https://github.com/sdcTools/cellKey) for the prototype testing, there are two possibilities.
+
+One is to download the compressed file [**v0.16.0.tar.gz**](https://github.com/sdcTools/cellKey/archive/v0.16.0.tar.gz) and issue locally using the following commands:
 
 ```
-install_github(
-  repo = "sdcTools/ptable", 
-  ref = "v0.2.0_prototype", 
-  dependencies = c("Imports", "Depends"),
-  build_opts = "--build-vignettes", 
+tmpf <- tempfile(fileext = ".tar.gz")
+download.file(
+  url = "https://github.com/sdcTools/cellKey/archive/v0.16.0.tar.gz",
+  dest = tmpf
+)
+
+remotes::install_local(
+  path = tmpf,
+  dependencies = TRUE,
+  build_opts = "--no-resave-data",
+  force = TRUE
+)
+```
+
+The second method allows to install the package directly from github without the need to explicitly download a file. This can be done using the code listed below:
+
+```
+remotes::install_github(
+  repo = "sdcTools/cellKey",
+  ref = "v0.16.0",
+  dependencies = TRUE,
+  build_opts = "--no-resave-data",
   force = TRUE
 )
 ```
@@ -39,32 +58,6 @@ If you experience a timeout due to a proxy server while downloading, one can wor
 if (!require("httr")) install.packages("httr")
 httr::set_config(
   use_proxy(url = "xxx.xxx.xxx.xxx", port = yy)
-)
-```
-
-#### cellKey
-To install the [**cellKey**](https://github.com/sdcTools/cellKey) for the prototype testing, there are two possibilities.
-
-One is to download the compressed file [**v0.15.0.tar.gz**](https://github.com/sdcTools/cellKey/archive/v0.15.0.tar.gz) and issue the following command:
-
-```
-remotes::install_local(
-  path = "/path/to/downloaded/cellKey_0.15.0.tar.gz", 
-  dependencies = TRUE, 
-  build_opts = "--build-vignettes", 
-  force = TRUE
-)
-```
-
-The second method allows to install the package directly from github without the need to explicitly download a file. This can be done as follows:
-
-```
-remotes::install_github(
-  repo = "sdcTools/cellKey", 
-  ref = "v0.15.0", 
-  dependencies = TRUE, 
-  build_opts = "--build-vignettes", 
-  force = TRUE
 )
 ```
 
@@ -81,6 +74,8 @@ Furthermore, all functions are documented and the help-index of the package can 
 ```
 help(pa = cellKey)
 ```
+
+Additionally, the automatic generated pkgdown page can be viewed online [**here**](https://sdctools.github.io/cellKey/).
 
 ### Further Information
 The package is developed in its seperate github-repository at [**sdcTools/cellKey**](https://github.com/sdcTools/cellKey) where additional information such as changes between versions are documented.
