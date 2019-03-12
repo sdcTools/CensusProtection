@@ -23,12 +23,12 @@ update.packages(ask = FALSE)
 #### cellKey
 To install the [**cellKey**](https://github.com/sdcTools/cellKey) for the prototype testing, there are two possibilities.
 
-One is to download the compressed file [**v0.16.0.tar.gz**](https://github.com/sdcTools/cellKey/archive/v0.16.0.tar.gz) and issue locally using the following commands:
+One is to download the compressed file [**v0.16.1.tar.gz**](https://github.com/sdcTools/cellKey/archive/v0.16.1.tar.gz) and issue locally using the following commands:
 
 ```
 tmpf <- tempfile(fileext = ".tar.gz")
 download.file(
-  url = "https://github.com/sdcTools/cellKey/archive/v0.16.0.tar.gz",
+  url = "https://github.com/sdcTools/cellKey/archive/v0.16.1.tar.gz",
   dest = tmpf
 )
 
@@ -45,7 +45,7 @@ The second method allows to install the package directly from github without the
 ```
 remotes::install_github(
   repo = "sdcTools/cellKey",
-  ref = "v0.16.0",
+  ref = "v0.16.1",
   dependencies = TRUE,
   build_opts = "--no-resave-data",
   force = TRUE
