@@ -88,16 +88,18 @@ The package includes a vignette and a graphical user interface and it can draw p
 
 #### 2.2	package cellKey
 
-The cellKey package also needs to be installed from github using the devtools package with the following line of codes. It is necessary to have the package ptable installed before installing the cellKey package.
+The cellKey package also needs to be installed from github using the devtools package with the following line of codes. Note that these instructions automatically install all required dependencies, including package `ptable`. It is therefore not required to install the `ptable` package separately as shown in the previous section.
 ```{r, eval=FALSE}
 rm(list=ls())
 update.packages(ask=FALSE)
 install.packages("devtools")
-library(devtools)
-install_github("sdcTools/ptable", ref="v0.2.0_prototype",
-  dependencies=c("Imports","Depends"), build_opts="--build-vignettes", force=TRUE)
-install_github("sdcTools/cellKey", ref="v0.15.0", dependencies=TRUE,
-  build_opts="--build-vignettes", force=TRUE)
+remotes::install_github(
+  repo = "sdcTools/cellKey",
+  ref = "v0.16.1",
+  dependencies = TRUE,
+  build_opts = "--no-resave-data",
+  force = TRUE
+)
 ```
 
 The package includes a vignette with an example on how to describe and create hierarchies and use the different functions of the package. Users have to be aware that to keep the consistency between different hypercubes (i.e. that if the same cell appears in different hypercubes, it is perturbed in the same way), the same pTable need to be used. Including the ptable package in cellKey package makes it more straightforward to use, but this mistake of using different pTables for different hypercubes need to be avoided to keep the consistency of the method. However, if prefered, users can use the ptable package directly and use its output as input to the cellKey package.
