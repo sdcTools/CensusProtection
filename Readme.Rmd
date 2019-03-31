@@ -3,10 +3,10 @@ title: "How-To"
 author: Ma&euml;l-Luc Buron, Peter-Paul de Wolf, Bernhard Meindl, Tobias Enderle
 date: "`r Sys.Date()`"
 output:
-  pdf_document:
-    toc: false
   md_document:
     variant: markdown_github
+  pdf_document:
+    toc: false
 ---
   
 <!-- README.md is generated from README.Rmd. Please edit that file -->
