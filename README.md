@@ -11,7 +11,8 @@ up-to-date documentation for the respective tools.
 
 ## How to use the open-source versions of the recommended census protection methods
 
-(This text is also available as a [**`pdf`**](How_to.pdf).)
+(This text is also available as a
+[**`pdf`**](https://github.com/sdcTools/protoTestCensus/blob/master/How_to.pdf).)
 
 In the previous Specific Grant Agreement - partly funded by
 [**`Eurostat`**](https://ec.europa.eu/eurostat/cros/content/harmonised-protection-census-data_en)
