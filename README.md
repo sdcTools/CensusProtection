@@ -84,7 +84,7 @@ The package is developed at
 [`github.com/sdcTools/ptable`](https://github.com/sdcTools/ptable) where
 also installation instructions and example usage can be found. The
 package includes a vignette and a graphical user interface and it can
-draw plots that describe the pertubations that will be applied to the
+draw plots that describe the perturbations that will be applied to the
 hypercubes based on a specific pTable with the
 [`cellKey`](https://github.com/sdcTools/cellKey) package,
 [`tauArgus`](https://github.com/sdcTools/tauargus) or SAS macros.

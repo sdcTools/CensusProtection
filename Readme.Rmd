@@ -57,7 +57,7 @@ The cell-key method can be applied either with the R package [`cellKey`](https:/
 
 #### 2.1 R-package ptable
 
-The package is developed at [`github.com/sdcTools/ptable`](https://github.com/sdcTools/ptable) where also installation instructions and example usage can be found. The package includes a vignette and a graphical user interface and it can draw plots that describe the pertubations that will be applied to the hypercubes based on a specific pTable with the [`cellKey`](https://github.com/sdcTools/cellKey) package, [`tauArgus`](https://github.com/sdcTools/tauargus) or SAS macros.
+The package is developed at [`github.com/sdcTools/ptable`](https://github.com/sdcTools/ptable) where also installation instructions and example usage can be found. The package includes a vignette and a graphical user interface and it can draw plots that describe the perturbations that will be applied to the hypercubes based on a specific pTable with the [`cellKey`](https://github.com/sdcTools/cellKey) package, [`tauArgus`](https://github.com/sdcTools/tauargus) or SAS macros.
 
 #### 2.2 R-package cellKey
 
@@ -66,4 +66,3 @@ The package is developed at [`github.com/sdcTools/cellKey`](https://github.com/s
 #### 2.3 TauARGUS
 
 The latest release of [`TauArgus`](https://github.com/sdcTools/tauargus) that includes the implementation of the cellKey method is available at   [`github.com/sdcTools/tauargus/releases`](https://github.com/sdcTools/tauargus/releases) where also a quick reference documentation with explanations and screenshots can be downloaded.
-
