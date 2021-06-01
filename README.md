@@ -1,16 +1,14 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-protoTestCensus
-===============
+# protoTestCensus
 
 Prototype Testing For Census (Target Record Swapping and Cell Key
 Method)
 
-How to use the open-source versions of the recommended census protection methods
---------------------------------------------------------------------------------
+## How to use the open-source versions of the recommended census protection methods
 
 (This text is also available in
-[**`pdf`-format**](https://github.com/sdcTools/protoTestCensus/blob/master/How_to.pdf).)
+[**`pdf`-format**](https://github.com/sdcTools/protoTestCensus/blob/previous-content/How_to.pdf).)
 
 In the previous Specific Grant Agreement called *Harmonised protection
 of CENSUS data in the ESS* methods have been developed and tested. In
