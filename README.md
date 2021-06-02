@@ -7,31 +7,30 @@ prototype software versions of targeted record swapping and the cell-key
 method for Census tables. Over time, the information in this repository
 became outdated as the developed methods have been included in different
 software packages/tools. So this document now refers to the most
-up-to-date documentation for the respective tools.
+up-to-date documentation for the respective tools, as well as to the
+latest releases of these tools.
 
 ## How to use the open-source versions of the recommended census protection methods
 
 (This text is also available as a
 [**`pdf`**](https://github.com/sdcTools/protoTestCensus/blob/master/How_to.pdf).)
 
-In the previous Specific Grant Agreement - partly funded by
-[**`Eurostat`**](https://ec.europa.eu/eurostat/cros/content/harmonised-protection-census-data_en)
-- called *“Harmonised protection of CENSUS data in the ESS”* methods
-have been developed and tested. In deliverables 3.3 and 3.4
-recommendations were given on how to protect the hypercubes and the grid
-data in the next Census. The two methods (record swapping and the cell
-key method) can be applied independently from each other.
+In the Specific Grant Agreement (SGA) called *Harmonised protection of
+CENSUS data in the ESS* two SDC methods have been developed and tested.
+In deliverables 3.3 and 3.4 recommendations were given on how to protect
+the hypercubes and the grid data in the next Census. The two methods
+(record swapping and the cell key method) can be applied independently
+from each other.
 
-However, with the SAS codes tested in this previous SGA, it was more
-straightforward to implement the cell key method. That is why part of
-the work in a new SGA (also partly funded by
-[**`Eurostat`**](https://ec.europa.eu/eurostat/cros/content/perturbative-confidentiality-methods_en))
-called *“Open source tools for perturbative confidentiality methods”* is
-to implement these methods in the open-source software R and Argus. This
-was done in the last eight months, some tests were carried out by the
-SGA members and now we would like to invite census experts to try the
-new implementations. They can be downloaded on the respective
-Github-repositories which will be linked from this document.
+During that SGA some initial SAS code was used to test the methods. For
+reference: the SAS code for the cell key method can be found
+[`here`](https://github.com/sdcTools/protoTestCensus/CellKey/SAS).
+
+In a follow-up SGA called *Open source tools for perturbative
+confidentiality methods* the record swapping and the cell key method
+were implemented in the open-source software `R` and Argus. These
+implementations can be downloaded on the respective Github-repositories
+which will be linked from this document.
 
 Part 1 is related to targeted record swapping while part 2 focuses on
 the cell-key method. The methods can be used independently: it is either
