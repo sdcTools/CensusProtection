@@ -12,9 +12,8 @@ output:
 <!-- README.md is generated from README.Rmd. Please edit that file -->
   
 ```{r, eval = FALSE, echo = FALSE}
-# R commands to produce both files, md and pdf
+# R commands to produce the required md-output that is shown on github
 rmarkdown::render("Readme.Rmd", output_format = "md_document", output_file = "README.md")
-rmarkdown::render("Readme.Rmd", output_format = "pdf_document", output_file = "How_to.pdf")
 ```
 
 ```{r, echo = FALSE}
@@ -25,21 +24,13 @@ knitr::opts_chunk$set(
 )
 ```
 
-# protoTestCensus
-
-This repository was created in order to guide census experts to test prototype software versions of targeted record swapping and the cell-key method for Census tables. Over time, the information in this repository became outdated as the developed methods have been included in different software packages/tools. So this document now refers to the most up-to-date documentation for the respective tools, as well as to the latest releases of these tools.
+# CensusProtection
 
 ## How to use the open-source versions of the recommended census protection methods
 
-(This text is also available as a [**`pdf`**](https://github.com/sdcTools/protoTestCensus/blob/master/How_to.pdf).)
+This repository explains how to use tools and methods recommended for census 2021 protection. Part 1 is related to targeted record swapping while part 2 focuses on the cell-key method. The methods can be used independently: it is either possible to compute unperturbed hypercubes with swapped microdata (part 2 can be ignored), perturbed hypercubes with original microdata (part 1 can be skipped), or perturbed hypercubes with swapped microdata (part 1 then part 2).
 
-In the Specific Grant Agreement (SGA) called *Harmonised protection of CENSUS data in the ESS* two SDC methods have been developed and tested. In deliverables 3.3 and 3.4 recommendations were given on how to protect the hypercubes and the grid data in the next Census. The two methods (record swapping and the cell key method) can be applied independently from each other.
-
-During that SGA some initial SAS code was used to test the methods. For reference: the SAS code for the cell key method can be found [`here`](https://github.com/sdcTools/protoTestCensus/CellKey/SAS). 
-
-In a follow-up SGA called *Open source tools for perturbative confidentiality methods* the record swapping and the cell key method were implemented in the open-source software `R` and Argus. These implementations can be downloaded on the respective Github-repositories which will be linked from this document.
-
-Part 1 is related to targeted record swapping while part 2 focuses on the cell-key method. The methods can be used independently: it is either possible to compute unperturbed hypercubes with swapped microdata (part 2 can be ignored), perturbed hypercubes with original microdata (part 1 can be skipped), or perturbed hypercubes with swapped microdata (part 1 then part 2).
+The instructions below contain references to the respective Github-repositories with the updated versions of the tools recommended for the protection of census. The activities related with development of tools and methods for the census protection were co-funded by Eurostat. 
 
 ### Part 1: Targeted record swapping
 To apply record swapping to original microdata it is possible to use either the `R` package [`recordSwapping`](https://github.com/sdcTools/recordSwapping) (paragraph 1.1) or [`MuARGUS`](https://github.com/sdcTools/muargus) (paragraph 1.2).
