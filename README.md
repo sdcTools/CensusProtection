@@ -21,7 +21,7 @@ tools and methods for the census protection were co-funded by Eurostat.
 
 To apply record swapping to original microdata it is possible to use
 either the `R` package
-[`recordSwapping`](https://github.com/sdcTools/recordSwapping)
+[`sdcMicro`](https://github.com/sdcTools/sdcMicro)
 (paragraph 1.1) or [`MuARGUS`](https://github.com/sdcTools/muargus)
 (paragraph 1.2).
 
@@ -29,15 +29,12 @@ Both implementation use the same underlying new C++ code which is
 optimized to be incredibly fast. This new implementation of the targeted
 record swapping method is intended to be very close to the SAS codes
 tested in the previous SGA based on the ONS codes. More information
-regarding the small differences can be found in the vignette of the
-[`recordSwapping`](https://github.com/sdcTools/recordSwapping) package.
+regarding the small differences can be found in the vignettes `vignette("recordSwapping")` from
+[`sdcMicro`](https://github.com/sdcTools/sdcMicro) package.
 
-#### 1.1 R-package recordSwapping
+#### 1.1 R-package for targeted record swapping
 
-The package is developed at
-[`github.com/sdcTools/recordSwapping`](https://github.com/sdcTools/recordSwapping)
-where also installation instructions and example usage as well as an
-introductory vignette can be found.
+Targeted record swapping is part of the package [`github.com/sdcTools/sdcMicro`](https://github.com/sdcTools/sdcMicro), function `recordSwap()`. The vignette for targeted record swapping is callable via `vignette("recordSwapping")`.
 
 #### 1.2 MuARGUS
 
