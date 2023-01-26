@@ -71,6 +71,18 @@ where also installation instructions and example usage can be found. The
 package includes also a detailed vignette that helps users getting
 started with the functionality of the package.
 
+##### Instructions for installing R-packages
+
+```
+install.packages(c("data.table","devtools","R.utils","sdcTable","sdcMicro","sdcHierarchies","remotes"))
+
+# install ptable
+devtools::install_github("sdcTools/ptable", dependencies=c("Depends","Imports"), force=TRUE, build_opts="--build-vignettes")
+# install cellKey
+remotes::install_github(repo = "sdcTools/cellKey", dependencies = TRUE, build_opts = "--no-resave-data", force = TRUE)
+```
+
+
 #### 2.3 TauARGUS
 
 The latest release of [`TauArgus`](https://github.com/sdcTools/tauargus)
